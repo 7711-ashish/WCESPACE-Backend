@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
 import "../connections/config.js";
 
-const JWT_SECRET = process.env.SECRET_KEY;
+const JWT_SECRET = "ASHISHAMOLSUTARWALCHANDCOLLGE";
 
 // const options = {
 //   expiresIn: '24h',

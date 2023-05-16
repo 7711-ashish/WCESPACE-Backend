@@ -17,14 +17,18 @@ const signIn = async (req, res) => {
     if (hashedPassword !== user.password) throw "Invalid email or password";
 
     const payload = user.toObject();
-    delete payload._id;
-    delete payload.access_token;
-    delete payload.password;
+
+    console.log(payload)
+
+    // delete payload._id;
+    // delete payload.access_token;
+    // delete payload.password;
 
     const token = await generateAccessToken(payload);
-
+    console.log(token)
     sendSuccessResponse({ res, data: token });
   } catch (err) {
+  
     sendFailResponse({ res, statusCode: 400, err });
   }
 };

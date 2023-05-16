@@ -11,7 +11,9 @@ import updatePassword from "../controllers/user/updatePassword.js";
 
 const router = Router();
 
-router.post("/signup", [auth, role(["admin"])], signUp);
+router.post("/signup", signUp);
+
+// router.post("/signup", [auth, role(["admin"])], signUp);
 router.post("/signin", signIn);
 router.get("/", auth, getUsers);
 router.delete("/:id", [auth, role(["admin"])], deleteUser);
