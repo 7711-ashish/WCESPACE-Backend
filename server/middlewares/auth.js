@@ -56,7 +56,7 @@ import { sendFailResponse } from "../utils/responses.js";
 //   }
 // }
 
-const JWT_SECRET = process.env.SECRET_KEY;
+const JWT_SECRET = "ASHISHAMOLSUTARWALCHANDCOLLGE";
 
 const auth = async (req, res, next) => {
   const token = req.header("x-auth-token");
