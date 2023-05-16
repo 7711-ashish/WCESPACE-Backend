@@ -1,0 +1,44 @@
+{
+  "expo": {
+    "name": "resource-tracker",
+    "slug": "resource-tracker",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/wce.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/wce.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0,
+      "url": "https://u.expo.dev/0be02ad3-85ec-4fbe-ad09-e74e4fb2b024"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.wce.resourcetracker"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/wce.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.wce.resourcetracker"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "0be02ad3-85ec-4fbe-ad09-e74e4fb2b024"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    }
+  }
+}
