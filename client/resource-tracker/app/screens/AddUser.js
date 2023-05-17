@@ -39,13 +39,13 @@ export default function AddUser() {
           const body = {
             department: deptValue,
             role:
-              roleValue === "hodAndAdvisor" ? ["hod", "advisor"] : [roleValue],
+              roleValue === "deanOfacademicsAndAdvisor" ? ["deanOfacademics", "advisor"] : [roleValue],
             name: values.name,
             email: values.email,
             password: values.password,
             mobile_number: values.mobile,
           };
-          if (roleValue === "hodAndAdvisor" || roleValue === "advisor") {
+          if (roleValue === "deanOfacademicsAndAdvisor" || roleValue === "advisor") {
             body.advisor_club = [clubValue];
           } else if (roleValue === "representative") {
             body.representative_club = clubValue;
@@ -119,7 +119,7 @@ export default function AddUser() {
                 keyboardType="numeric"
               />
 
-              {["representative", "advisor", "hodAndAdvisor"].includes(
+              {["representative", "advisor", "deanOfacademicsAndAdvisor"].includes(
                 roleValue
               ) && (
                   <>

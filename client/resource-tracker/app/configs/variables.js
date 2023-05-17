@@ -47,7 +47,7 @@ const Clubs = [
 const Roles = [
   {label: "Representative", value: "representative"},
   {label: "Advisor", value: "advisor"},
-  {label: "DeanOfAcademics", value: "hod"},
+  {label: "DeanOfAcademics", value: "deanOfacademics"},
   // {label: "Helper", value: "helper"},
   // {label: "HOD and Advisor", value: "hodAndAdvisor"}
 ]

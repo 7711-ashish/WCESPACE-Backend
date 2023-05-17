@@ -12,7 +12,7 @@ const router = Router();
 
 router.post("/", role(["representative"]), addRequest);
 router.get("/", getRequests);
-router.post("/approve", role(["advisor", "hod"]), approveRequest);
+router.post("/approve", role(["advisor", "deanOfacademics"]), approveRequest);
 router.put("/approve", role(["representative"]), updateRequest);
 router.put("/report", role(["representative"]), addReport);
 router.delete("/:id", role(["representative"]), deleteRequest);

@@ -211,12 +211,12 @@ export default function ViewRequest({ navigation, route }) {
           </View>
         </View>
 
-        {user.role.includes("advisor") || user.role.includes("hod") ? (
+        {user.role.includes("advisor") || user.role.includes("deanOfacademics") ? (
           <>
             <View style={styles.buttonGroup}>
               {((user.role.includes("advisor") &&
                 request.status == "pending") ||
-                (user.role.includes("hod") &&
+                (user.role.includes("deanOfacademics") &&
                   request.status == "approved by advisor")) && (
                   <>
                     <AppButton
@@ -243,7 +243,7 @@ export default function ViewRequest({ navigation, route }) {
 
               {((user.role.includes("advisor") &&
                 request.status == "pending") ||
-                user.role.includes("hod")) && (
+                user.role.includes("deanOfacademics")) && (
                   <AppButton
                     onPress={() => {
                       setStatus("declined");

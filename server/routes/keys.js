@@ -8,7 +8,7 @@ import { upload } from "../middlewares/upload.js";
 
 const router = Router();
 
-router.get("/", role(["hod", "advisor"]), getKeys);
+router.get("/", role(["deanOfacademics", "advisor"]), getKeys);
 
 router.put("/status", role(["helper"]), updateKeyStatus);
 

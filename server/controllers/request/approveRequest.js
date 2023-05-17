@@ -13,17 +13,20 @@ const approveRequest = async (req, res) => {
     const user = await userSchema.findOne({ email: req.user.email });
 
     if (
-      user.role.includes("hod") &&
-      user.department === request.resources.department &&
+      // user.role.includes("deanOfacademics") &&
+      // user.department === request.resources.department &&
+      // action === "declined"
+
+      user.role.includes("deanOfacademics") &&
       action === "declined"
     ) {
-      // hod can decline anything anytime
+      // deanOfacademics can decline anything anytime
       if (request.status === "declined") throw "Request is already declined";
 
       request.approvals.push({
         status: "declined",
         approver: user.email,
-        role: "hod",
+        role: "deanOfacademics",
         remarks,
       });
 
@@ -47,14 +50,18 @@ const approveRequest = async (req, res) => {
 
       // gap for readability
     } else if (
+      // request.status === "approved by advisor" &&
+      // user.role.includes("deanOfacademics") &&
+      // user.department === request.resources.department
+
       request.status === "approved by advisor" &&
-      user.role.includes("hod") &&
-      user.department === request.resources.department
+      user.role.includes("deanOfacademics")
+    
     ) {
       request.approvals.push({
         status: action,
         approver: user.email,
-        role: "hod",
+        role: "deanOfacademics",
         remarks,
       });
 

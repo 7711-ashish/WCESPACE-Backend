@@ -24,7 +24,7 @@ const AllRequests = () => {
     useEffect(() => {
         if (!focus) return;
         let query
-        if (user?.role.includes("hod")) {
+        if (user?.role.includes("deanOfacademics")) {
             query = { filter: true }
         }
         else if (user?.role.includes("advisor")) {
