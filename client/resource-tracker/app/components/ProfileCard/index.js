@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
   },
   container: {
     paddingHorizontal: 20,
-    borderColor: colors.grey3,
+    borderColor: "#03DAC5",
   },
   info: {
     fontSize: 18,

@@ -65,11 +65,11 @@ export default function Drawer() {
 
 
 
-          <AppDrawer.Screen name='Home' component={Home} options={{
+          {/* <AppDrawer.Screen name='Home' component={Home} options={{
             headerTitle: 'Home',
             drawerLabel: 'Home',
             ...drawerStyles
-          }} />
+          }} /> */}
           {/* <AppDrawer.Screen name='ApprovalStack' component={ApprovalStack} options={{
             headerTitle: 'Resource Operations',
             drawerLabel: 'Resource Operations',

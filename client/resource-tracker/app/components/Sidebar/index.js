@@ -35,6 +35,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 7,
         paddingTop: 10,
+        backgroundColor :"#FEEAE6"
     },
     heading: {
         fontSize: 24,

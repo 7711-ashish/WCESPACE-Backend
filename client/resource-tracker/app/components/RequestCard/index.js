@@ -49,7 +49,7 @@ export default function RequestCard(props) {
                         navigation.navigate('ViewRequest', { request: props })
                     }}
                     buttonStyles={{
-                        backgroundColor: colors.grey1,
+                        backgroundColor: colors.warning,
                         width: 100,
                         justifyContent: "center",
                         alignItems: "center",
@@ -89,6 +89,11 @@ export default function RequestCard(props) {
                         <Text>approved by advisor</Text>
                     </View>)
                 }
+                {
+                    props?.status === "approved by hod" && (<View style={styles.pendingstatus}>
+                        <Text>approved by hod</Text>
+                    </View>)
+                }
             </View>
 
 
@@ -102,7 +107,7 @@ const styles = StyleSheet.create({
         marginHorizontal: 10,
         marginBottom: 10,
         borderRadius: 5,
-        borderColor: colors.grey3,
+        borderColor: "#03DAC5",
         borderWidth: 1
     },
     row: {

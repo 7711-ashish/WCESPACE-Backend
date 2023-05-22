@@ -36,7 +36,7 @@ export default function ResourceInfoCard(props) {
                             navigation.navigate('EditResource', { resource: props })
                         }}
                         buttonStyles={{
-                            backgroundColor: uicolors.primary,
+                            backgroundColor: "#37966f",
                             width: 80,
                             paddingVertical: 5,
                             borderRadius: 3
@@ -47,15 +47,15 @@ export default function ResourceInfoCard(props) {
             </View>
 
             <View>
-                <AppButton title="Key History" onPress={() => {
-                    navigation.navigate('KeyHistory', { name: props.name })
+                <AppButton title="History" onPress={() => {
+                    navigation.navigate('KeyHistory', { name: props?.name })
                 }} buttonStyles={{
                     width: 120,
                     height: 40,
                     padding: 0,
                     backgroundColor: "white",
                     borderBottomColor: "blue",
-                    borderBottomWidth: 3,
+                
 
 
                 }}
@@ -78,9 +78,9 @@ const styles = StyleSheet.create({
         marginHorizontal: 10,
         marginBottom: 10,
         borderRadius: 3,
-        backgroundColor: colors.grey5,
-        borderBottomColor: "blue",
-        borderBottomWidth: 3
+        backgroundColor: "#FEEAE6",
+        borderColor: colors.grey5,
+        borderWidth: 3
     },
     row: {
         flexDirection: 'row',

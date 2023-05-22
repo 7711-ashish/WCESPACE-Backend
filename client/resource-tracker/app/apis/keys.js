@@ -13,7 +13,7 @@ const updateKeyStatus = (payload) => {
 // }
 
 const getKeyById = (payload) => {
-    return apiClient.get('/keys/', payload)
+    return apiClient.get('/keys/history', payload)
 }
 
 export { updateKeyStatus, uploadImages, getKeyById }

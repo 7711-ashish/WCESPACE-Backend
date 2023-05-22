@@ -35,18 +35,18 @@ export default function AppButton({
 const styles = StyleSheet.create({
   button: {
     flexDirection: "row",
-    backgroundColor: "#0080ff",
+    backgroundColor: "#03DAC5",
     borderRadius: 5,
     justifyContent: "center",
     alignItems: "center",
-    padding: 15,
-    marginVertical: 15,
+    padding: 18,
+    marginVertical: 20,
 
   },
   text: {
-    color: "#fff",
+    color: "black",
     textTransform: "capitalize",
     fontWeight: "500",
-    fontSize: 18,
+    fontSize: 14,
   },
 });
