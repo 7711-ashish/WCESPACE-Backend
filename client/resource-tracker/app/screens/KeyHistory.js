@@ -7,10 +7,10 @@ import { useIsFocused } from '@react-navigation/native';
 
 const KeyHistory = ({ route }) => {
     const focus = useIsFocused()
-    const id = route?.params?.id;
+    const name = route?.params?.name;
     const [key, setKey] = useState(null);
     const getKeyDetails = () => {
-        getKeyById({ id: id }).then((res) => {
+        getKeyById({ name: name }).then((res) => {
             console.log(res)
             if (res.ok && res.data.status == "success") {
 
@@ -33,7 +33,7 @@ const KeyHistory = ({ route }) => {
             <View style={{
             }}>
                 {
-                    key && key?.holder_history.map((item, index) => {
+                    key && key?.map((item, index) => {
                         return <View key={index}><HistoryCard {...item} /></View>
                     })
                 }

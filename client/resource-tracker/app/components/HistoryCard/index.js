@@ -9,7 +9,7 @@ const HistoryCard = (props) => {
     return (
         <View style={styles.card}>
             <View style={styles.innercard}>
-                <Text>{props.from.email}</Text>
+                <Text>{props.time.from}</Text>
             </View>
             <View>
 
@@ -20,7 +20,17 @@ const HistoryCard = (props) => {
             </View>
             <View style={styles.innercard}>
                 <Text>
-                    {props.to.email}
+                    {props.time.to}
+                </Text>
+            </View>
+
+            <View>
+                    <Entypo name="arrow-long-right" size={24} color="black" />
+            </View>
+
+            <View style={styles.innercard}>
+                <Text>
+                    {props.applicant}
                 </Text>
             </View>
         </View>

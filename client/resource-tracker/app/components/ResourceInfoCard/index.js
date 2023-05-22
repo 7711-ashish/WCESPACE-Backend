@@ -48,7 +48,7 @@ export default function ResourceInfoCard(props) {
 
             <View>
                 <AppButton title="Key History" onPress={() => {
-                    navigation.navigate('KeyHistory', { id: props.key_id })
+                    navigation.navigate('KeyHistory', { name: props.name })
                 }} buttonStyles={{
                     width: 120,
                     height: 40,
