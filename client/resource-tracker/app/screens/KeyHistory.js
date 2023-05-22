@@ -10,7 +10,7 @@ const KeyHistory = ({ route }) => {
     const name = route?.params?.name;
     const [key, setKey] = useState(null);
     const getKeyDetails = () => {
-        getKeyById({ name: name }).then((res) => {
+        getKeyById({ name: "Class19" }).then((res) => {
             console.log(res)
             if (res.ok && res.data.status == "success") {
 
@@ -33,7 +33,7 @@ const KeyHistory = ({ route }) => {
             <View style={{
             }}>
                 {
-                    key && key?.map((item, index) => {
+                    key && key.map((item, index) => {
                         return <View key={index}><HistoryCard {...item} /></View>
                     })
                 }

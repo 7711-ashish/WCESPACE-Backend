@@ -10,7 +10,7 @@ const router = Router();
 
 // router.get("/", role(["deanOfacademics", "advisor"]), getKeys);
 
-router.get("/history", getKeys);
+router.get("/history",role(["admin"]), getKeys);
 
 router.put("/status", role(["helper"]), updateKeyStatus);
 
