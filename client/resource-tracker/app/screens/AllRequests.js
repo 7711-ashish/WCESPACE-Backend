@@ -35,6 +35,11 @@ const AllRequests = () => {
                 filter: true
             }
         }
+        else if (user?.role.includes("hod")) {
+            query = {
+                filter: true
+            }
+        }
 
         setLoaded(false)
         setRequests([])

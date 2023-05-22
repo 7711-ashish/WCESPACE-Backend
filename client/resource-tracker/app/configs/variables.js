@@ -48,6 +48,7 @@ const Roles = [
   {label: "Representative", value: "representative"},
   {label: "Advisor", value: "advisor"},
   {label: "DeanOfAcademics", value: "deanOfacademics"},
+  {label: "HOD", value: "hod"},
   // {label: "Helper", value: "helper"},
   // {label: "HOD and Advisor", value: "hodAndAdvisor"}
 ]

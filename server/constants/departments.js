@@ -6,6 +6,7 @@ const departmentList = [
   "Computer Science and Engineering",
   "Information Technology",
   "WCE",
+  "Sports",
 ];
 
 export default departmentList;

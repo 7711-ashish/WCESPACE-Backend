@@ -50,13 +50,27 @@ const approveRequest = async (req, res) => {
 
       // gap for readability
     } else if (
-      // request.status === "approved by advisor" &&
-      // user.role.includes("deanOfacademics") &&
-      // user.department === request.resources.department
-
       request.status === "approved by advisor" &&
+      user.role.includes("hod") &&
+      user.department === request.resources.department
+
+      // request.status === "approved by advisor" &&
+      // user.role.includes("deanOfacademics")
+
+    ) {
+      request.approvals.push({
+        status: action,
+        approver: user.email,
+        role: "hod",
+        remarks,
+      });
+
+      request.status = "approved by hod";
+
+      // gap for readability
+    } else if (
+      request.status === "approved by hod" &&
       user.role.includes("deanOfacademics")
-    
     ) {
       request.approvals.push({
         status: action,

@@ -36,6 +36,7 @@ const requestsSchema = new mongoose.Schema(
       enum: [
         "pending",
         "approved by advisor",
+        "approved by hod",
         "approved",
         "declined",
         "changes required",

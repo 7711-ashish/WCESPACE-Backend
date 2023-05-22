@@ -12,6 +12,7 @@ const clubsList = [
   "Art Circle",
   "Rotarct",
   "Codechef WCE Chapter",
+  "WCE Sports Club",
 ];
 
 export default clubsList;

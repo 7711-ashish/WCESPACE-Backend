@@ -39,7 +39,7 @@ export default function AddUser() {
           const body = {
             department: deptValue,
             role:
-              roleValue === "deanOfacademicsAndAdvisor" ? ["deanOfacademics", "advisor"] : [roleValue],
+              roleValue === "deanOfacademicsAndAdvisor" ? ["deanOfacademics", "advisor","hod"] : [roleValue],
             name: values.name,
             email: values.email,
             password: values.password,

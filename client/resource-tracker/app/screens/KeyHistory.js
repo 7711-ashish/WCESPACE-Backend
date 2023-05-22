@@ -10,7 +10,7 @@ const KeyHistory = ({ route }) => {
     const name = route?.params?.name;
     const [key, setKey] = useState(null);
     const getKeyDetails = () => {
-        getKeyById({ name: name }).then((res) => {
+        getKeyById({ name: route?.params?.name }).then((res) => {
             console.log(res)
             if (res.ok && res.data.status == "success") {
 

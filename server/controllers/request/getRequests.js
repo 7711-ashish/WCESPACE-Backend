@@ -23,10 +23,16 @@ const getRequests = async (req, res) => {
             club: { $in: req.user.advisor_club },
           }))
         );
+      if (role.includes("hod"))
+        requests.push(
+          ...(await requestsSchema.find({
+            "resources.department": req.user.department,
+          }))
+        );
       if (role.includes("deanOfacademics"))
         requests.push(
           ...(await requestsSchema.find({
-            // "resources.department": req.user.department,
+  
           }))
         );
       if (role.includes("helper")) {
