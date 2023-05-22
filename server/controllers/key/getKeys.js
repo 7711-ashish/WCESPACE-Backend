@@ -31,7 +31,7 @@ const getKeys = async (req, res) => {
     const { name } = req.query;
 
     if (!name) {
-      const keys = await requests.find({'resources.list':{$in:["Class19"]}});
+      const keys = await requests.find({'resources.list':{$in:[name]}});
       if (!keys) throw "History not found";
       console.log(keys)
 
