@@ -13,11 +13,8 @@ const approveRequest = async (req, res) => {
     const user = await userSchema.findOne({ email: req.user.email });
 
     if (
-      // user.role.includes("deanOfacademics") &&
-      // user.department === request.resources.department &&
-      // action === "declined"
-
-      user.role.includes("deanOfacademics") &&
+      user.role.includes("hod") &&
+      user.department === request.resources.department &&
       action === "declined"
     ) {
       // deanOfacademics can decline anything anytime
@@ -26,7 +23,7 @@ const approveRequest = async (req, res) => {
       request.approvals.push({
         status: "declined",
         approver: user.email,
-        role: "deanOfacademics",
+        role: "hod",
         remarks,
       });
 
@@ -53,10 +50,6 @@ const approveRequest = async (req, res) => {
       request.status === "approved by advisor" &&
       user.role.includes("hod") &&
       user.department === request.resources.department
-
-      // request.status === "approved by advisor" &&
-      // user.role.includes("deanOfacademics")
-
     ) {
       request.approvals.push({
         status: action,

@@ -211,7 +211,7 @@ export default function ViewRequest({ navigation, route }) {
           </View>
         </View>
 
-        {user.role.includes("advisor") || user.role.includes("deanOfacademics") ? (
+        {user.role.includes("advisor") || user.role.includes("deanOfacademics") || user.role.includes("hod") ? (
           <>
             <View style={styles.buttonGroup}>
               {((user.role.includes("advisor") &&
@@ -219,7 +219,7 @@ export default function ViewRequest({ navigation, route }) {
                 (user.role.includes("hod") &&
                   request.status == "approved by advisor") || 
                 (user.role.includes("deanOfacademics") &&
-                  request.status == "approved by hod"))&& (
+                  request.status == "approved by hod")) && (
                   <>
                     <AppButton
                       onPress={() => {

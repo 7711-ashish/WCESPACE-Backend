@@ -50,7 +50,7 @@ const requestsSchema = new mongoose.Schema(
             approver: { type: String, required: true },
             role: {
               type: String,
-              enum: ["advisor", "deanOfacademics"],
+              enum: ["advisor", "deanOfacademics", "hod"],
               required: true,
             },
             status: {
