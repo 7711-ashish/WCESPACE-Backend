@@ -28,7 +28,7 @@ import {
 
 const getKeys = async (req, res) => {
   try {
-    const { name } = req.query;
+    const  name  = req.params
     console.log(name)
     if (!name) {
       const keys = await requests.find({'resources.list':{$in:[name]}});
