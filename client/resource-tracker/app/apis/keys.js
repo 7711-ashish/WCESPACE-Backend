@@ -9,7 +9,7 @@ const updateKeyStatus = (payload) => {
 }
 
 const getKeyById = (payload) => {
-    return apiClient.get('/keys', payload)
+    return apiClient.post('/keys/history', payload)
 }
 
 // const getKeyById = (payload) => {
