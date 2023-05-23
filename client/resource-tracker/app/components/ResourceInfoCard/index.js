@@ -12,7 +12,6 @@ export default function ResourceInfoCard(props) {
     const [switchstate, chageSwitch] = useState(props?.is_available);
     const navigation = useNavigation()
 
-
     return (
         <View style={styles.card}>
             <View style={styles.row}>
@@ -27,10 +26,11 @@ export default function ResourceInfoCard(props) {
 
             <View style={styles.buttonrow}>
                 <View style={styles.department}>
+                <Text style={styles.subheading}>Owner :</Text>
                     <Text style={styles.subheading}>Department of {props?.department}</Text>
                 </View>
                 <View>
-                    <AppButton
+                    {/* <AppButton
                         title={"Edit"}
                         onPress={() => {
                             navigation.navigate('EditResource', { resource: props })
@@ -42,13 +42,13 @@ export default function ResourceInfoCard(props) {
                             borderRadius: 3
                         }}
 
-                    />
+                    /> */}
                 </View>
             </View>
 
             <View>
                 <AppButton title="History" onPress={() => {
-                    navigation.navigate('KeyHistory', { name: props?.name })
+                    navigation.navigate('KeyHistory', { name : props?.name })
                 }} buttonStyles={{
                     width: 120,
                     height: 40,

@@ -9,7 +9,7 @@ const createResource = (payload) => {
 }
 
 const updateResource = (payload) => {
-    return apiClient.post('/', payload);
+    return apiClient.put('/', payload);
 }
 
 const deleteResource = (payload) => {

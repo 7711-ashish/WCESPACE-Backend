@@ -8,9 +8,10 @@ import { useIsFocused } from '@react-navigation/native';
 const KeyHistory = ({ route }) => {
     const focus = useIsFocused()
     const name = route?.params?.name;
+    console.log(name)
     const [key, setKey] = useState(null);
     const getKeyDetails = () => {
-        getKeyById({ name: route?.params?.name }).then((res) => {
+        getKeyById({ name: name }).then((res) => {
             console.log(res)
             if (res.ok && res.data.status == "success") {
 

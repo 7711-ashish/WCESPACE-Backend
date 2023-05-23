@@ -13,7 +13,7 @@ router.use("/users", users);
 router.use("/requests", auth, requests);
 // router.use("/keys", auth, keys);
 
-router.use("/keys",auth, keys);
+router.use("/keys", keys);
 router.use("/resources", auth, resources);
 router.use("/upload", auth, upload)
 
