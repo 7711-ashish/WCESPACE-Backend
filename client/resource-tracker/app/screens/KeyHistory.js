@@ -8,7 +8,6 @@ import { useIsFocused } from '@react-navigation/native';
 const KeyHistory = ({ route }) => {
     const focus = useIsFocused()
     const name = route?.params?.name;
-    console.log(name)
     const [key, setKey] = useState(null);
     const getKeyDetails = () => {
 
@@ -23,7 +22,7 @@ const KeyHistory = ({ route }) => {
         // fetch(`https://render-wce-space.onrender.com/api/keys/history`,requestOptions)
         // .then((response) => console.log(response))
 
-        getKeyById({ name: name }).then((res) => {
+        getKeyById(name).then((res) => {
             console.log(res)
             if (res.ok && res.data.status == "success") {
 
