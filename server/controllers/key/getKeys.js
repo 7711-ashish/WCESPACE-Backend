@@ -27,13 +27,13 @@ import {
 // };
 
 const getKeys = async (req, res) => {
+
   try {
-    const  name  = req.params
-    console.log(name)
+    const { name } = req.query;
+
     if (!name) {
-      const keys = await requests.find({'resources.list':{$in:[name]}});
+      const keys = await  await requests.find({'resources.list':{$in:[name]}, status : "approved"});
       if (!keys) throw "History not found";
-      console.log(keys)
 
       sendSuccessResponse({ res, data: keys });
     } else {
@@ -45,6 +45,7 @@ const getKeys = async (req, res) => {
   } catch (err) {
     sendFailResponse({ res, statusCode: 400, err });
   }
+
 };
 
 export default getKeys;
