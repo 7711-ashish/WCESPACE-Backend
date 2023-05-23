@@ -8,12 +8,12 @@ const updateKeyStatus = (payload) => {
     return apiClient.put('/keys/status', payload)
 }
 
-// const getKeyById = (payload) => {
-//     return apiClient.get('/keys', payload)
-// }
-
 const getKeyById = (payload) => {
-    return apiClient.get('/keys/history', payload)
+    return apiClient.get('/keys', payload)
 }
+
+// const getKeyById = (payload) => {
+//     return apiClient.get('/keys/history', payload)
+// }
 
 export { updateKeyStatus, uploadImages, getKeyById }

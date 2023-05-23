@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React, { useState, useEffect } from 'react'
 import HistoryCard from '../components/HistoryCard';
-import { getResourceHistory } from '../apis/resource';
+import { getKeyById } from '../apis/resource';
 import { ScrollView } from 'react-native-gesture-handler';
 import { useIsFocused } from '@react-navigation/native';
 
@@ -11,14 +11,26 @@ const KeyHistory = ({ route }) => {
     console.log(name)
     const [key, setKey] = useState(null);
     const getKeyDetails = () => {
-        getResourceHistory({ name: name }).then((res) => {
-            console.log(res)
-            if (res.ok && res.data.status == "success") {
 
-                console.log(res.data.data);
-                setKey(res.data.data);
-            }
-        })
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                name : name
+            })
+          };
+
+        fetch(`https://render-wce-space.onrender.com/api/keys/history`,requestOptions)
+        .then((response) => console.log(response))
+
+        // getResourceHistory({ name: name }).then((res) => {
+        //     console.log(res)
+        //     if (res.ok && res.data.status == "success") {
+
+        //         console.log(res.data.data);
+        //         setKey(res.data.data);
+        //     }
+        // })
     }
     useEffect(() => {
         if (!focus) return;
