@@ -17,6 +17,11 @@ const deleteResource = (payload) => {
 
 }
 
+const getResourceHistory = (payload) => {
+    return apiClient.get('/resources/history', payload);
+}
 
 
-export { getResource, createResource, updateResource, deleteResource };
+
+
+export { getResource, createResource, updateResource, deleteResource,getResourceHistory };

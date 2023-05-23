@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React, { useState, useEffect } from 'react'
 import HistoryCard from '../components/HistoryCard';
-import { getKeyById } from '../apis/keys';
+import { getResourceHistory } from '../apis/resource';
 import { ScrollView } from 'react-native-gesture-handler';
 import { useIsFocused } from '@react-navigation/native';
 
@@ -11,7 +11,7 @@ const KeyHistory = ({ route }) => {
     console.log(name)
     const [key, setKey] = useState(null);
     const getKeyDetails = () => {
-        getKeyById({ name: name }).then((res) => {
+        getResourceHistory({ name: name }).then((res) => {
             console.log(res)
             if (res.ok && res.data.status == "success") {
 
