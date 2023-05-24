@@ -11,7 +11,7 @@ const router = Router();
 
 router.use("/users", users);
 router.use("/requests", auth, requests);
-router.use("/keys", auth, keys);
+router.use("/keys", keys);
 
 // router.use("/keys", keys);
 router.use("/resources", auth, resources);

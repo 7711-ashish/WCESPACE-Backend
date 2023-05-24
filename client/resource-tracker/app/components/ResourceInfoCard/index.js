@@ -26,9 +26,18 @@ export default function ResourceInfoCard(props) {
 
             <View style={styles.buttonrow}>
                 <View style={styles.department}>
-                <Text style={styles.subheading}>Owner :</Text>
+                    <Text style={styles.subheading}>Department :</Text>
                     <Text style={styles.subheading}>Department of {props?.department}</Text>
                 </View>
+                <View style={styles.department}>
+                    <Text style={styles.subheading}>Capacity/Count :</Text>
+                    <Text style={styles.subheading}>{props?.capacity}</Text>
+                </View>
+                <View style={styles.department}>
+                    <Text style={styles.subheading}>Registeed Date :</Text>
+                    <Text style={styles.subheading}>{props?.createdAt}</Text>
+                </View>
+                
                 <View>
                     {/* <AppButton
                         title={"Edit"}
@@ -48,7 +57,7 @@ export default function ResourceInfoCard(props) {
 
             <View>
                 <AppButton title="History" onPress={() => {
-                    navigation.navigate('KeyHistory', { name : props?.name })
+                    navigation.navigate('KeyHistory', { name: props?.name })
                 }} buttonStyles={{
                     width: 120,
                     height: 40,

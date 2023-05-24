@@ -29,7 +29,7 @@ import {
 const getKeys = async (req, res) => {
 
   try {
-    const { name } = req.query;
+    const  name  = req.params.name;
 
     if (!name) {
       const keys = await  await requests.find({'resources.list':{$in:[name]}, status : "approved"});

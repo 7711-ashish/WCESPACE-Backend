@@ -11,25 +11,17 @@ const KeyHistory = ({ route }) => {
     const [key, setKey] = useState(null);
     const getKeyDetails = () => {
 
-        // const requestOptions = {
-        //     method: 'POST',
-        //     headers: { 'Content-Type': 'application/json' },
-        //     body: JSON.stringify({
-        //         name : name
-        //     })
-        //   };
-
-        // fetch(`https://render-wce-space.onrender.com/api/keys/history`,requestOptions)
-        // .then((response) => console.log(response))
+        fetch(`https://render-wce-space.onrender.com/api/keys/${name}`)
+        .then((response) => console.log(response))
     
-        getKeyById(name).then((res) => {
-            console.log(res)
-            if (res.ok && res.data.status == "success") {
+        // getKeyById({name: name}).then((res) => {
+        //     console.log(res)
+        //     if (res.ok && res.data.status == "success") {
 
-                console.log(res.data.data);
-                setKey(res.data.data);
-            }
-        })
+        //         console.log(res.data.data);
+        //         setKey(res.data.data);
+        //     }
+        // })
     }
     useEffect(() => {
         if (!focus) return;
