@@ -11,6 +11,7 @@ import { useNavigation } from '@react-navigation/native';
 
 export default function RequestCard(props) {
     const navigation = useNavigation()
+    console.log(props)
     return (
         <View style={styles.card}>
             <View style={styles.row}>
@@ -35,12 +36,12 @@ export default function RequestCard(props) {
                     </View>
                     <View>
                         <Text style={styles.heading}>Applicant:</Text>
-                        <Text>{props.applicant}</Text>
+                        <Text>{props.club}</Text>
                     </View>
                 </View>
-                <View style={styles.icon}>
+                {/* <View style={styles.icon}>
                     <FontAwesome name="building-o" size={40} color="blue" />
-                </View>
+                </View> */}
             </View>
             <View style={styles.row}>
                 <AppButton
