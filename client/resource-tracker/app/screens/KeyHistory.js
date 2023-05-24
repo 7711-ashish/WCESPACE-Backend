@@ -12,8 +12,13 @@ const KeyHistory = ({ route }) => {
     const getKeyDetails = () => {
 
         fetch(`https://render-wce-space.onrender.com/api/keys/${name}`)
-        .then((response) => console.log(response))
-    
+        .then((response) => response.json())
+        .then((json) => {
+
+            console.log(json.data)
+            setKey(json.data);
+
+        })
         // getKeyById({name: name}).then((res) => {
         //     console.log(res)
         //     if (res.ok && res.data.status == "success") {
