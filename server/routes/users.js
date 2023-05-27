@@ -15,7 +15,7 @@ router.post("/signup", [auth, role(["admin"])], signUp);
 router.post("/signin", signIn);
 router.get("/", auth, getUsers);
 router.delete("/:id", [auth, role(["admin"])], deleteUser);
-router.put("/", [auth, role(["admin"])], updateUser);
+router.put("/", updateUser);
 router.put("/password", auth, updatePassword);
 
 export default router;
